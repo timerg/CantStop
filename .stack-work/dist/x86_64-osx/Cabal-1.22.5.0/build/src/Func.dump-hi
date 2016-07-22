@@ -1,0 +1,338 @@
+
+==================== FINAL INTERFACE ====================
+2016-07-22 10:57:07.434591 UTC
+
+interface CantS_2PJu4IHxBqgIdCJt5xQ7i2:Func 7103
+  interface hash: e1b1bb03d136f8ee79a3c186a8869233
+  ABI hash: 75d17dd73abbbab80388a8268fa6e53a
+  export-list hash: 861339b67a61333ab8bd6aa7c2e2c641
+  orphan hash: 693e9af84d3dfcc71e640e005bdc5e2e
+  flag hash: 4c0a7b65a6dddbc4161c2e2bfabe3dc3
+  sig of: Nothing
+  used TH splices: False
+  where
+exports:
+  Func.main
+  Func.newRound
+  Func.nextProb
+  Func.someFunc
+  Func.testSituation
+  Func.threeCoins
+  Func.update
+  Func.Distp
+  Func.Prob
+  Func.Situation
+module dependencies: Lib.Parser
+package dependencies: array-0.5.1.0@array_67iodizgJQIIxYVTp4emlA
+                      base-4.8.2.0* deepseq-1.4.1.1@deeps_6vMKxt5sPFR0XsbRWvvq59
+                      ghc-prim-0.4.0.0 integer-gmp-1.0.0.0
+                      mtl-2.2.1@mtl_Aue4leSeVkpKLsfHIV51E8
+                      random-1.1@rando_9Kgekc9yEaLHLNUuw6paWL*
+                      time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn
+                      transformers-0.4.2.0@trans_GZTjP9K5WFq01xC9BAGQpF
+orphans: base-4.8.2.0:GHC.Base base-4.8.2.0:GHC.Float
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.Calendar.Gregorian
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.Format.Parse
+         time-1.5.0.1@time_FTheb6LSxyX1UABIbBXRfn:Data.Time.LocalTime.LocalTime
+         transformers-0.4.2.0@trans_GZTjP9K5WFq01xC9BAGQpF:Control.Monad.Trans.Error
+family instance modules: base-4.8.2.0:Control.Applicative
+                         base-4.8.2.0:Data.Either base-4.8.2.0:Data.Functor.Identity
+                         base-4.8.2.0:Data.Monoid base-4.8.2.0:Data.Type.Equality
+                         base-4.8.2.0:Data.Void base-4.8.2.0:GHC.Exts
+                         base-4.8.2.0:GHC.Generics
+import  -/  Lib.Parser c690bde95fde784208ab2cb85e4f8055
+  exports: 1e51e1ca10f94a1b3ad5308e659c77d6
+import  -/  base-4.8.2.0:GHC.Base 1db77db5dae73d8c424c85b09fbadb89
+import  -/  base-4.8.2.0:GHC.List 0c736920522bbd14b770342776012ab6
+import  -/  base-4.8.2.0:GHC.Num 9f42750c866f5832ca565146bd660c60
+import  -/  base-4.8.2.0:GHC.Real 1281efa9baf803bc7859d7efb89a38b3
+import  -/  base-4.8.2.0:Prelude 694dcaf039efe62df1c44834e2dbd2fb
+import  -/  base-4.8.2.0:System.IO 0899686bfc1d9ef72dff3de85e99862a
+import  -/  ghc-prim-0.4.0.0:GHC.Types 6b27fb3fdbd0e3f0925a4496c66513bb
+import  -/  mtl-2.2.1@mtl_Aue4leSeVkpKLsfHIV51E8:Control.Monad.State 3c8114545920fee1e57c3d7a07c2d0d7
+import  -/  mtl-2.2.1@mtl_Aue4leSeVkpKLsfHIV51E8:Control.Monad.State.Class 71cb030be928f92f7d8f2a86db6e1cae
+import  -/  random-1.1@rando_9Kgekc9yEaLHLNUuw6paWL:System.Random d515be7800d601546639722a30f2fed4
+import  -/  transformers-0.4.2.0@trans_GZTjP9K5WFq01xC9BAGQpF:Control.Monad.Trans.State.Lazy a0ae9990521f3719d0ffc837d271b7a5
+a83b1282153f52ca4ac78b08a23f3661
+  $wthreeCoins ::
+    System.Random.StdGen
+    -> (# GHC.Types.Bool, GHC.Types.Bool, GHC.Types.Bool #)
+  {- Arity: 1, Strictness: <L,U>, Inline: [0],
+     Unfolding: (\ w :: System.Random.StdGen ->
+                 let {
+                   ds :: (GHC.Types.Bool, System.Random.StdGen)
+                   = case System.Random.$wrandomIvalInteger
+                            @ System.Random.StdGen
+                            @ GHC.Types.Int
+                            System.Random.$fRandomGenStdGen
+                            GHC.Num.$fNumInt
+                            System.Random.getStdRandom4
+                            System.Random.$fRandomBool3
+                            w of ww2 { (#,#) ww3 ww4 ->
+                     (case ww3 of wild2 { GHC.Types.I# ds1 ->
+                      case ds1 of ds2 {
+                        DEFAULT -> GHC.Types.True 0 -> GHC.Types.False } },
+                      ww4) }
+                 } in
+                 let {
+                   ds1 :: (GHC.Types.Bool, System.Random.StdGen)
+                   = case System.Random.$wrandomIvalInteger
+                            @ System.Random.StdGen
+                            @ GHC.Types.Int
+                            System.Random.$fRandomGenStdGen
+                            GHC.Num.$fNumInt
+                            System.Random.getStdRandom4
+                            System.Random.$fRandomBool3
+                            (case ds of wild { (,) firstCoin newGen ->
+                             newGen }) of ww2 { (#,#) ww3 ww4 ->
+                     (case ww3 of wild2 { GHC.Types.I# ds2 ->
+                      case ds2 of ds3 {
+                        DEFAULT -> GHC.Types.True 0 -> GHC.Types.False } },
+                      ww4) }
+                 } in
+                 (# case ds of wild { (,) firstCoin newGen -> firstCoin },
+                    case ds1 of wild { (,) secondCoin newGen' -> secondCoin },
+                    case System.Random.$wrandomIvalInteger
+                           @ System.Random.StdGen
+                           @ GHC.Types.Int
+                           System.Random.$fRandomGenStdGen
+                           GHC.Num.$fNumInt
+                           System.Random.getStdRandom4
+                           System.Random.$fRandomBool3
+                           (case ds1 of wild { (,) secondCoin newGen' ->
+                            newGen' }) of ww2 { (#,#) ww3 ww4 ->
+                    case ww3 of wild2 { GHC.Types.I# ds2 ->
+                    case ds2 of ds3 {
+                      DEFAULT -> GHC.Types.True 0 -> GHC.Types.False } } } #)) -}
+68c8f8e33e199fcc7d217f931bbe4420
+  type Distp = GHC.Types.Int
+ce7b69a3db32eb94a04e8c1e8ba9677d
+  type Prob = GHC.Types.Double
+d82c25ff1ce2da5a1d8513d5e000b8ca
+  type Situation = [(GHC.Types.Int, Func.Prob)]
+072a7ea0c7bc3eb78167bc2ca88e9a56
+  main :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Func.main1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
+28d25caa165e07caae9ddb1aa9ed9742
+  main1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ s :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 case GHC.IO.Handle.Internals.wantReadableHandle_1
+                        @ GHC.Base.String
+                        GHC.IO.Handle.Text.hGetLine4
+                        GHC.IO.Handle.FD.stdin
+                        GHC.IO.Handle.Text.hGetLine2
+                          `cast`
+                        (<GHC.IO.Handle.Types.Handle__>_R
+                         ->_R Sym (GHC.Types.NTCo:IO[0] <GHC.Base.String>_R))
+                        s of ds1 { (#,#) ipv ipv1 ->
+                 case System.IO.readIO8
+                        @ [GHC.Types.Int]
+                        (Text.ParserCombinators.ReadP.run
+                           @ [GHC.Types.Int]
+                           Func.main2
+                           ipv1) of wild {
+                   []
+                   -> case GHC.Prim.raiseIO#
+                             @ GHC.Exception.SomeException
+                             @ [GHC.Types.Int]
+                             System.IO.readIO5
+                             ipv
+                      ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                      of {}
+                   : x ds
+                   -> case ds of wild1 {
+                        [] -> (# ipv, GHC.Tuple.() #)
+                        : ipv2 ipv3
+                        -> case GHC.Prim.raiseIO#
+                                  @ GHC.Exception.SomeException
+                                  @ [GHC.Types.Int]
+                                  System.IO.readIO2
+                                  ipv
+                           ret_ty (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+                           of {} } } }) -}
+bfed147533315414ef67af49321731e7
+  main2 :: Text.ParserCombinators.ReadP.P [GHC.Types.Int]
+  {- Unfolding: (GHC.Read.$wa
+                   @ GHC.Types.Int
+                   GHC.Read.$fReadInt2
+                     `cast`
+                   (Sym (Text.ParserCombinators.ReadPrec.NTCo:ReadPrec[0]
+                             <GHC.Types.Int>_R))
+                   @ [GHC.Types.Int]
+                   (Text.ParserCombinators.ReadP.$fApplicativeP_$creturn
+                      @ [GHC.Types.Int])) -}
+cc3e76706b1339b612b9e427c1347d8e
+  newRound :: [GHC.Types.Bool] -> Func.Situation -> Func.Situation
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><L,1*U>,
+     Unfolding: InlineRule (2, True, False)
+                (\ bs :: [GHC.Types.Bool] ss :: Func.Situation ->
+                 GHC.Base.build
+                   @ (GHC.Types.Int, Func.Prob)
+                   (\ @ b1
+                      c1 :: (GHC.Types.Int, Func.Prob) -> b1 -> b1[OneShot]
+                      n :: b1[OneShot] ->
+                    GHC.List.foldr2
+                      @ GHC.Types.Bool
+                      @ (GHC.Types.Int, Func.Prob)
+                      @ b1
+                      (GHC.List.zipWithFB
+                         @ (GHC.Types.Int, Func.Prob)
+                         @ b1
+                         @ b1
+                         @ GHC.Types.Bool
+                         @ (GHC.Types.Int, Func.Prob)
+                         c1
+                         Func.nextProb)
+                      n
+                      bs
+                      ss)) -}
+519253065519c601339728552f155370
+  nextProb ::
+    GHC.Types.Bool
+    -> (GHC.Types.Int, Func.Prob) -> (GHC.Types.Int, Func.Prob)
+  {- Arity: 2, HasNoCafRefs, Strictness: <S,1*U><S,1*U(U,1*U(U))>m,
+     Inline: INLINE[0],
+     Unfolding: InlineRule (2, True, False)
+                (\ w :: GHC.Types.Bool w1 :: (GHC.Types.Int, Func.Prob) ->
+                 case w1 of ww { (,) ww1 ww2 ->
+                 case w of wild {
+                   GHC.Types.False
+                   -> (ww1,
+                       case ww2 of wild1 { GHC.Types.D# x ->
+                       GHC.Types.D# (GHC.Prim./## (GHC.Prim.*## x 5.0) 6.0) })
+                   GHC.Types.True
+                   -> (ww1,
+                       case ww2 of wild1 { GHC.Types.D# x ->
+                       GHC.Types.D# (GHC.Prim./## x 6.0) }) } }) -}
+375701948db937ebb0b7d9dfddf21ace
+  someFunc :: GHC.Types.IO ()
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: InlineRule (0, True, True)
+                Func.someFunc1 `cast` (Sym (GHC.Types.NTCo:IO[0] <()>_R)) -}
+18c9b4b5b42ce720a8049e66b9065481
+  someFunc1 ::
+    GHC.Prim.State# GHC.Prim.RealWorld
+    -> (# GHC.Prim.State# GHC.Prim.RealWorld, () #)
+  {- Arity: 1, Strictness: <L,U>,
+     Unfolding: (\ eta :: GHC.Prim.State# GHC.Prim.RealWorld[OneShot] ->
+                 GHC.IO.Handle.Text.hPutStr2
+                   GHC.IO.Handle.FD.stdout
+                   Func.someFunc2
+                   GHC.Types.True
+                   eta) -}
+7509889b5d98641574e026d00911c002
+  someFunc2 :: [GHC.Types.Char]
+  {- Unfolding: (GHC.CString.unpackCString# "someFunc"#) -}
+5d2183588285d3a332eca2420a9d62bd
+  testSituation :: Func.Situation
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Types.Int, Func.Prob)
+                   Func.testSituation8
+                   Func.testSituation1) -}
+7cf6c670a7a161f111cfd95e5ea54449
+  testSituation1 :: [(GHC.Types.Int, Func.Prob)]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Types.Int, Func.Prob)
+                   Func.testSituation6
+                   Func.testSituation2) -}
+3a14ebaa7358faad96fe6d905d7f5886
+  testSituation2 :: [(GHC.Types.Int, Func.Prob)]
+  {- HasNoCafRefs, Strictness: m2,
+     Unfolding: (GHC.Types.:
+                   @ (GHC.Types.Int, Func.Prob)
+                   Func.testSituation3
+                   (GHC.Types.[] @ (GHC.Types.Int, Func.Prob))) -}
+b7649e567a62b79334abfd33fd798a88
+  testSituation3 :: (GHC.Types.Int, GHC.Types.Double)
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: ((Func.testSituation5, Func.testSituation4)) -}
+64acbb8215efe7dee0070eed148b1d40
+  testSituation4 :: GHC.Types.Double
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.D# 1.0) -}
+5113845fec4d60fbac6f3c31eb246915
+  testSituation5 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 3) -}
+dd33e33a17f4f8c582f86f50ccfd2bd8
+  testSituation6 :: (GHC.Types.Int, GHC.Types.Double)
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: ((Func.testSituation7, Func.testSituation4)) -}
+e2f41f8deb0b6db6749cd7fb62c5f3a7
+  testSituation7 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 2) -}
+d554b4c2e0330cf93f5947002a49c410
+  testSituation8 :: (GHC.Types.Int, GHC.Types.Double)
+  {- HasNoCafRefs, Strictness: m,
+     Unfolding: ((Func.testSituation9, Func.testSituation4)) -}
+496a5be84e7c7efe65401ef627c2866b
+  testSituation9 :: GHC.Types.Int
+  {- HasNoCafRefs, Strictness: m, Unfolding: (GHC.Types.I# 1) -}
+7ac338b55d429e7dc28236f87ebef833
+  threeCoins ::
+    System.Random.StdGen
+    -> (GHC.Types.Bool, GHC.Types.Bool, GHC.Types.Bool)
+  {- Arity: 1, Strictness: <L,U>m, Inline: INLINE[0],
+     Unfolding: InlineRule (1, True, False)
+                (\ w :: System.Random.StdGen ->
+                 case Func.$wthreeCoins w of ww { (#,,#) ww1 ww2 ww3 ->
+                 (ww1, ww2, ww3) }) -}
+528c6cc14867e51f7c2549ce90f16cd0
+  update ::
+    [GHC.Types.Bool]
+    -> Control.Monad.Trans.State.Lazy.State Func.Situation ()
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U><L,1*U>m,
+     Unfolding: InlineRule (0, True, True)
+                Func.update1
+                  `cast`
+                (<[GHC.Types.Bool]>_R
+                 ->_R Trans
+                          (<[(GHC.Types.Int, Func.Prob)]>_R
+                           ->_R Sym (Data.Functor.Identity.NTCo:Identity[0]
+                                         <((), [(GHC.Types.Int, Func.Prob)])>_R))
+                          (Sym (Control.Monad.Trans.State.Lazy.NTCo:StateT[0]
+                                    <[(GHC.Types.Int, Func.Prob)]>_N
+                                    <Data.Functor.Identity.Identity>_R
+                                    <()>_N))) -}
+20821e80eded4606306bb433febb08be
+  update1 ::
+    [GHC.Types.Bool]
+    -> [(GHC.Types.Int, Func.Prob)]
+    -> ((), [(GHC.Types.Int, Func.Prob)])
+  {- Arity: 2, HasNoCafRefs, Strictness: <L,1*U><L,1*U>m,
+     Unfolding: InlineRule (2, True, False)
+                (\ bs :: [GHC.Types.Bool] eta :: [(GHC.Types.Int, Func.Prob)] ->
+                 (GHC.Tuple.(),
+                  GHC.Base.build
+                    @ (GHC.Types.Int, Func.Prob)
+                    (\ @ b1
+                       c1 :: (GHC.Types.Int, Func.Prob) -> b1 -> b1[OneShot]
+                       n :: b1[OneShot] ->
+                     GHC.List.foldr2
+                       @ GHC.Types.Bool
+                       @ (GHC.Types.Int, Func.Prob)
+                       @ b1
+                       (GHC.List.zipWithFB
+                          @ (GHC.Types.Int, Func.Prob)
+                          @ b1
+                          @ b1
+                          @ GHC.Types.Bool
+                          @ (GHC.Types.Int, Func.Prob)
+                          c1
+                          Func.nextProb)
+                       n
+                       bs
+                       eta))) -}
+vectorised variables:
+vectorised tycons:
+vectorised reused tycons:
+parallel variables:
+parallel tycons:
+trusted: safe
+require own pkg trusted: False
+
